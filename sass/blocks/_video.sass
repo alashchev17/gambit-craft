@@ -1,0 +1,70 @@
+.video
+  margin-top: -490px
+  color: $light
+  overflow-x: hidden
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 45px
+  &__player
+    background: url('../assets/images/video-bg.jpg') no-repeat center center
+    width: 640px
+    height: 370px
+    position: relative
+    overflow: hidden
+    border-radius: 5px
+    flex-shrink: 100%
+  &__button
+    padding: 18px 46px 19px 45px
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    display: inline-block
+    &--primary
+      background: $green
+      color: $light
+  &__play
+    &-button
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: none
+      cursor: pointer
+  &__content
+    max-width: 532px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    height: 403px
+    margin-top: -45px
+  &__title
+    font-weight: bold
+    font-size: 35px
+    line-height: 130.52%
+    text-transform: uppercase
+    span
+      position: relative
+      z-index: 1
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 8px
+        z-index: -1
+        background: linear-gradient(90deg, #26BE96 0%, #041410 179.17%)
+        width: 120px
+        height: 14px
+  &__text
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    color: $grey-text
+    max-width: 498px
+  &__block
+    display: flex
+    align-items: flex-end
+    justify-content: space-between

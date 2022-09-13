@@ -1,0 +1,47 @@
+.news
+  margin-bottom: 154px
+  &__title
+    font-weight: bold
+    font-size: 35px
+    line-height: 130.52%
+    text-transform: uppercase
+    color: $light
+    margin-bottom: 62px
+    span
+      position: relative
+      z-index: 1
+      &::after
+        content: ''
+        position: absolute
+        width: 147px
+        height: 14px
+        bottom: 9px
+        right: 0
+        background: linear-gradient(90deg, #26BE96 0%, #041410 179.17%)
+        z-index: -1
+  &__image
+    border-radius: 12px
+    overflow: hidden
+    margin-bottom: 17px
+  &__cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__subtitle
+    font-weight: 600
+    font-size: 18px
+    line-height: 27px
+    color: $light
+    text-transform: uppercase
+    margin-bottom: 18px
+    max-width: 370px
+  &__credits
+    font-size: 16px
+    line-height: 19px
+    padding: 0
+    margin: 0
+    display: flex
+    color: $grey-text
+  &__author
+    margin-right: 30px
+    list-style: none

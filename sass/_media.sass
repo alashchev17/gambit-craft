@@ -1,0 +1,651 @@
+@media screen and ( max-width: 1400px )
+  .container
+    width: 992px
+    padding: 0 25px
+  .header
+    &__button
+      margin-left: auto
+    &__nav
+      display: none
+      &-buttons
+        display: none
+      &-mobile
+        position: absolute
+        top: 107px
+        left: 0
+        &--visible
+          display: block
+          width: 100%
+          height: 100vh
+          z-index: 100
+          background: $darken-bg
+          .header
+            &__button
+              margin-left: 0
+              display: none
+            &__nav
+              &-buttons
+                margin-left: 0
+                display: block
+                margin-bottom: 25px
+            &__link
+              &::after
+                content: unset
+            &__list
+              display: flex
+              align-items: center
+              flex-direction: column
+              padding: 50px 0 150px
+              height: 100%
+              overflow: auto
+              &-item
+                margin-right: 0
+                margin-bottom: 50px
+      &-button
+        background-color: transparent
+        color: #ccc
+        display: block
+        position: relative
+        overflow: hidden
+        margin: 0
+        padding: 0
+        width: 35px
+        height: 35px
+        padding: 0
+        font-size: 0
+        text-indent: -9999px
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        box-shadow: none
+        border: none
+        border-radius: unset
+        cursor: pointer
+        -webkit-transition: background 0.3s
+        transition: background 0.3s
+        margin-left: 20px
+        &--active
+          .header__nav-item
+            background: none
+            &::before, &::after
+              background-color: $light
+              -webkit-transition-delay: 0s, 0.3s
+              transition-delay: 0s, 0.3s
+            &::before
+              top: 0
+              -webkit-transform: rotate(45deg)
+              transform: rotate(45deg)
+            &::after
+              bottom: 0
+              -webkit-transform: rotate(-45deg)
+              transform: rotate(-45deg)
+      &-item
+        display: block
+        position: absolute
+        top: 17px
+        left: 0px
+        right: 0px
+        height: 2px
+        background: $light
+        -webkit-transition: background 0s 0.3s
+        transition: background 0s 0.3s
+        &::before, &::after
+          position: absolute
+          display: block
+          left: 0
+          width: 100%
+          height: 2px
+          background-color: $light
+          content: ""
+          -webkit-transition-duration: 0.3s, 0.3s
+          transition-duration: 0.3s, 0.3s
+          -webkit-transition-delay: 0.3s, 0s
+          transition-delay: 0.3s, 0s
+        &::before
+          top: -12px
+          -webkit-transition-property: top, transform
+          transition-property: top, transform
+        &::after
+          bottom: -12px
+          -webkit-transition-property: bottom, transform
+          transition-property: bottom, transform
+  .pleasure
+    &__image
+      background: lighten($darken-bg, 0.9)
+    &__content
+      &-image
+        display: none
+    &__tabs
+      justify-content: space-between
+      align-items: baseline
+      height: 535px
+      width: 100%
+    &__wrapper
+      flex-direction: column
+      
+  .tabs
+    &__item
+      &:nth-child(n)
+        margin-right: 0
+        margin-left: 0
+        margin-bottom: 0
+        margin-top: 0
+  .video
+    background: lighten($darken-bg, 0.9)
+    &__wrapper
+      flex-direction: column
+    &__content
+      margin-top: 0
+  .choice
+    &__hero
+      right: 0
+      width: 600px
+    &__title
+      font-size: 28px
+      max-width: 400px
+      span
+        &::after
+          width: 100%
+          left: 0
+    &__text
+      font-size: 14px
+      max-width: 400px
+    &__section
+      font-size: 75px
+    &__container
+      margin-bottom: 60px
+  .swiper
+    &-pagination
+      bottom: 20px !important
+  .card
+    padding: 20px 15px 25px 15px
+    max-width: 300px
+    &::before
+      content: unset
+    &__title
+      font-size: 28px
+    &__text
+      font-size: 13px
+      line-height: 18px
+  .news
+    &__image
+      width: 300px
+    &__subtitle
+      max-width: 300px
+      font-size: 14px
+      line-height: 19px
+    &__credits
+      flex-direction: column
+      list-style-type: none
+  .footer
+    &__list
+      &-item
+        &:not(:last-child)
+          margin-right: 20px
+        &:last-child
+          margin-right: 30px
+      &-buttons
+        display: none
+@media screen and ( max-width: 992px )
+  .container
+    width: 768px
+  .modal
+    &-auth
+      right: 80px
+  .hero
+    &__content
+      padding-top: 40px
+  .scroll-to
+    bottom: 15px
+  .pleasure
+    &__content
+      padding-top: 45px
+      padding-bottom: 45px
+    &__tabs
+      height: 820px
+  .video
+    margin-top: -350px
+    &__player
+      width: 100%
+  .choice
+    &__hero
+      right: -60px
+      width: 475px
+    &__title
+      font-size: 22px
+      max-width: 310px
+      margin-bottom: 20px
+    &__text
+      font-size: 12px
+      max-width: 330px
+      margin-bottom: 12px
+    &__section
+      font-size: 60px
+    &__container
+      margin-bottom: 95px
+  .stages
+    &__cards
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__card
+      &:not(:last-child)
+        margin-bottom: 30px
+  .card
+    max-width: 100%
+    width: 100%
+  .news
+    &__card
+      width: 100%
+      margin-bottom: 45px
+    &__image
+      width: 100%
+    &__subtitle
+      font-size: 24px
+      line-height: 30px
+      max-width: unset
+    &__credits
+      flex-direction: row
+      list-style: disc
+  .footer
+    &__top
+      justify-content: space-between
+    &__list
+      flex-direction: column
+      justify-content: space-between
+      &-item
+        margin-bottom: 25px
+@media screen and ( max-width: 768px )
+  .container
+    width: 100%
+  .hero
+    min-height: 600px
+    &__content
+      max-width: 384px
+    &__wrapper
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      height: 110px
+      width: 287px
+      margin: 44px auto auto auto
+    &__button
+      width: 100%
+      text-align: center
+    &__start
+      font-size: 24px
+    &__title
+      font-size: 32px
+      margin-top: 10px
+      line-height: 40px
+  .choice
+    &__hero
+      display: none
+    &__title
+      max-width: 100%
+    &__text
+      max-width: 100%
+    &__container
+      margin-bottom: 120px
+  .footer
+    padding: 45px 0
+    &__link
+      font-size: 14px
+      line-height: 16px
+    &__button
+      font-size: 14px
+      line-height: 16px
+  .copyright
+    flex-direction: column
+    align-items: center
+    &__text
+      text-align: center
+      font-size: 14px
+      line-height: 16px
+      &:not(:last-child)
+        margin-bottom: 15px
+  .background
+    background: $footer-bg
+@media screen and ( max-width: 610px )
+  .pleasure
+    min-height: 100%
+    height: 100%
+    padding: 45px 0
+    &__content
+      padding-top: unset
+      padding-bottom: unset
+    &__title
+      font-size: 24px
+      span
+        &::after
+          height: 10px
+    &__image
+      min-height: 100vh
+    &__wrapper
+      flex-direction: unset
+    &__tabs
+      justify-content: center
+  .tabs
+    &__item
+      max-width: unset
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 9px
+  .video
+    margin-top: 225px
+    &__title
+      font-size: 24px
+      span
+        &::after
+          height: 10px
+          width: 80px
+    &__text
+      font-size: 14px
+      line-height: 18px
+  .stages
+    margin: 50px 0 50px 0
+    &__title
+      font-size: 24px
+      span
+        &::after
+          width: 90%
+          left: 2px
+          height: 11px
+  .news
+    margin-bottom: 70px
+    &__title
+      font-size: 24px
+    &__subtitle
+      font-size: 18px
+      line-height: 20px
+    &__credits
+      flex-direction: column
+      list-style: none
+    &__author
+      margin-bottom: 7px
+@media screen and ( max-width: 480px )
+  .header
+    &__link
+      font-size: 12px
+      line-height: 18px
+    &__button
+      display: none
+      font-size: 12px
+      line-height: 18px
+    &__nav
+      &-button
+        margin-left: auto
+      &-mobile
+        top: 99px
+        &--visible
+          .header
+            &__button
+              display: flex
+  .modal
+    &-auth
+      right: 50%
+      top: 50%
+      transform: translate(50%)
+      width: 90%
+      min-height: 510px
+      max-height: 90%
+      &__title
+        font-size: 14px
+        line-height: 18px
+      &__label, &__link, &__closing
+        font-size: 14px
+        line-height: 16px
+      &__button
+        font-size: 14px
+        line-height: 18px
+  .hero
+    min-height: 500px
+    &__content
+      max-width: 264px
+    &__wrapper
+      width: 90%
+    &__button
+      font-size: 12px
+      line-height: 18px
+    &__start
+      font-size: 18px
+      line-height: 90%
+    &__title
+      font-size: 22px
+      line-height: 28px
+  .video
+    &__content
+      height: unset
+      justify-content: unset
+    &__button
+      font-size: 12px
+      line-height: 18px
+      padding: 12px 40px 13px 40px
+    &__player
+      height: 250px
+    &__block
+      margin: 20px 0
+      img
+        display: none
+    &__text
+      margin-bottom: 35px
+  .footer
+    &__top
+      flex-direction: column
+      align-items: center
+    &__list
+      &-item
+        text-align: center
+        margin-right: 0 !important
+  .g-recaptcha 
+    transform: scale(0.89)
+    transform-origin: 0 0
+@media screen and ( max-width: 370px )
+  .video
+    &__player
+      height: 180px
+    &__play-button
+      width: 41px
+      height: 41.5px
+      img
+        width: 100%
+        height: 100%
+  .choice
+    margin-bottom: 50px
+    &__container
+      margin-bottom: 90px
+  .news
+    &__subtitle
+      font-size: 14px
+      line-height: 18px
+    &__credits
+      font-size: 12px
+    &__author
+      margin-bottom: 4px
+  .footer
+    &__link, &__button
+      font-size: 12px
+      line-height: 14px
+  .copyright
+    &__text
+      font-size: 12px
+      line-height: 14px
+  .register
+    &__header
+      flex-direction: column
+    &__logo
+      margin-bottom: 15px
+    &__form
+      &-label
+        font-size: 16px
+        line-height: 18px
+      &-input
+        height: 55px
+        font-size: 14px
+        line-height: 15px
+      &-auth
+        font-size: 16px
+        line-height: 15px
+        margin-bottom: 40px
+      &-button
+        font-size: 16px
+        line-height: 18px
+      &-checkbox
+        font-size: 14px
+  .checkbox
+    &__label
+      width: 20px
+      height: 20px
+    &__info
+      font-size: 12px
+      line-height: 16px
+  label.invalid
+    font-size: 14px
+@media screen and ( max-width: 325px )
+  .news
+    &__subtitle
+      font-size: 12px
+  
+  
+@media screen and ( min-width: 992px )
+  .header
+    &__link
+      &:hover
+        &::after
+          transform: scaleX(100%)
+    &__button
+      &--primary
+        transition: box-shadow 0.3s ease-in-out, background 0.1s ease-in
+        &:hover
+          box-shadow: 0px 4px 0px #19755D
+        &:active
+          background: #76CBB4
+  .hero
+    &__button
+      &--primary
+        transition: box-shadow 0.3s ease-in-out, background 0.1s ease-in
+        &:hover
+          box-shadow: 0px 4px 0px #19755D
+        &:active
+          background: #76CBB4
+      &--secondary
+        transition: filter 0.3s ease-in, background 0.1s ease-in, color 0.1s ease-in
+        &:hover
+          filter: drop-shadow(0px 0px 4px #26BE96) drop-shadow(0px 0px 15px #26BE96)
+        &:active
+          background: #76CBB4
+          color: $light
+          filter: none
+          border: 2px solid #76CBB4
+  .modal-auth
+    &__button
+      &--secondary
+        transition: filter 0.3s ease-in, background 0.1s ease-in, color 0.1s ease-in
+        &:hover
+          filter: drop-shadow(0px 0px 4px #26BE96) drop-shadow(0px 0px 15px #26BE96)
+        &:active
+          background: #76CBB4
+          color: $light
+          filter: none
+          border: 1px solid #76CBB4
+  .tabs
+    &__item
+      &:nth-child(1)
+        &:hover
+          border: 3px solid #26be96
+          box-sizing: border-box
+          box-shadow: 0px 4px 15px 5px rgba(38, 190, 150, 0.15)
+          border-radius: 5px  
+      &:nth-child(2)
+        &:hover
+          border: 3px solid #f46427
+          box-sizing: border-box
+          box-shadow: 0px 4px 15px 5px rgba(244, 100, 39, 0.15)
+          border-radius: 5px  
+      &:nth-child(3)
+        &:hover
+          border: 3px solid #e05686
+          box-sizing: border-box
+          box-shadow: 0px 4px 15px 5px rgba(224, 86, 134, 0.15)
+          border-radius: 5px  
+      &:nth-child(4)
+        &:hover
+          border: 3px solid #ffb94b
+          box-sizing: border-box
+          box-shadow: 0px 4px 15px 5px rgba(255, 185, 75, 0.15)
+          border-radius: 5px  
+      &:nth-child(5)
+        &:hover
+          border: 3px solid #FE7D7D
+          box-sizing: border-box
+          box-shadow: 0px 4px 15px 5px rgba(254, 125, 125, 0.15)
+          border-radius: 5px  
+      &:nth-child(6)
+        &:hover
+          border: 3px solid #6fbaff
+          box-sizing: border-box
+          box-shadow: 0px 4px 15px 5px rgba(111, 186, 255, 0.15)
+          border-radius: 5px
+  .video
+    &__button
+      &--primary
+        transition: box-shadow 0.3s ease-in-out, background 0.1s ease-in
+        &:hover
+          box-shadow: 0px 4px 0px #19755D
+        &:active
+          background: #76CBB4
+  .card
+    &__button
+      &--primary
+        transition: box-shadow 0.3s ease-in-out, background 0.1s ease-in
+        &:hover
+          box-shadow: 0px 4px 0px #19755D
+        &:active
+          background: #76CBB4
+  .news
+    &__subtitle
+      &:hover
+        text-decoration: underline
+  .footer
+    &__button
+      &--secondary
+        transition: filter 0.3s ease-in, background 0.1s ease-in, color 0.1s ease-in
+        &:hover
+          filter: drop-shadow(0px 0px 4px #26BE96) drop-shadow(0px 0px 15px #26BE96)
+        &:active
+          background: #76CBB4
+          color: $light
+          filter: none
+          border: 3px solid #76CBB4
+    &__link
+      transition: color 0.3s
+      &:hover
+        color: darken($light, 30%)
+  .register
+    &__button
+      &--secondary
+        transition: filter 0.3s ease-in, background 0.1s ease-in, color 0.1s ease-in
+        &:hover
+          filter: drop-shadow(0px 0px 4px #26BE96) drop-shadow(0px 0px 15px #26BE96)
+        &:active
+          background: #76CBB4
+          color: $light
+          filter: none
+          border: 2px solid #76CBB4
+          svg
+            path
+              fill: $light
+    &__form
+      &-button
+        &--primary
+          transition: box-shadow 0.3s ease-in-out, background 0.1s ease-in
+          &:hover
+            box-shadow: 0px 4px 0px #19755D
+          &:active
+            background: #76CBB4
+  .to-top
+    &:hover, &:focus
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25)
+      background: linear-gradient(#316547, #20422f)
+    &:active
+      background: linear-gradient(#20422f, #0f2017)

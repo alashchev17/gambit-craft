@@ -1,0 +1,63 @@
+.hero
+  background: #0F111A url('../assets/images/hero-bg.jpg') no-repeat center center
+  min-height: 778px
+  width: 100%
+  color: $light
+  position: relative
+  overflow-x: hidden
+  &__content
+    max-width: 560px
+    margin: auto
+    padding-top: 172px
+  &__start
+    font-weight: 500
+    font-size: 35px
+    line-height: 130.52%
+    text-transform: uppercase
+    text-align: center
+  &__title
+    font-weight: bold
+    font-size: 50px
+    line-height: 65px
+    text-align: center
+    text-transform: uppercase
+    margin-top: 16px
+  &__wrapper
+    margin-top: 44px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__button
+    padding: 18px 29px
+    text-transform: uppercase
+    color: $light
+    background: $green
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    &--secondary
+      background: transparent
+      border: 2px solid #26BE96
+      color: $green
+.scroll-to
+  &__link
+    width: 77px
+    height: 72px
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 18px
+    line-height: 130.52%
+    text-align: center
+    justify-content: space-between
+    flex-direction: column
+    position: absolute
+    left: 50%
+    bottom: 73px
+    cursor: pointer
+    transform: translateX(-50%)
+    img
+      width: 16px
+      height: 18px
+      margin-top: 10px

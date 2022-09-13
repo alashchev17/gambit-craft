@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap')
+
+*, *:before, *:after
+  box-sizing: border-box
+body
+  margin: 0
+  padding: 0
+  font-family: 'Inter', sans-serif
+  background: lighten($darken-bg, 0.9)
+  position: relative
+h1, h2, h3, h4, h5, h6, ul, li, p
+  margin: 0
+  padding: 0
+a
+  text-decoration: none
+  color: $light
+.container
+  width: 1280px
+  margin: 0 auto
+  position: relative
+.overflow
+  overflow: hidden
+button, input, textarea
+  border: none
+  outline: none
+.button
+  padding: 20px
+  border-radius: 4px
+  cursor: pointer
+.invalid
+  color: #FF5C5C
+label.invalid
+  position: absolute
+  left: 0
+  bottom: 11px

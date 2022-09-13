@@ -1,0 +1,99 @@
+.modal-auth
+  background: $darken-bg
+  color: $light
+  width: 392px
+  height: 536px
+  position: absolute
+  top: 70px
+  right: 0
+  z-index: 10
+  display: flex
+  flex-direction: column
+  align-items: center
+  visibility: hidden
+  padding: 25px 25px 30px 22px
+  z-index: -1
+  transform: translateY(-50px)
+  transition: transform 0.3s ease-in-out, display 0.3s ease-in-out
+  &--visible
+    visibility: visible
+    z-index: 1000
+    transform: translateY(0)
+  &__overlay
+    // width: 100vw
+    // height: 100vh
+    // z-index: -1
+    // visibility: hidden
+  &__block
+    display: flex
+    flex-direction: column
+    position: relative
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 7px
+    label
+      margin-bottom: 0
+  &__title
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+    text-transform: uppercase
+    padding: 0 0 21px 0
+    margin: 0 0 19px 0
+    border-bottom: 1px solid #1F2336
+    width: 100%
+  &__form
+    display: flex
+    flex-direction: column
+    width: 100%
+  &__label
+    color: $grey-text
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 7px
+    margin-left: 3px
+  &__input
+    background: $dark-bg
+    height: 65px
+    padding: 16px 20px
+    color: $light
+    margin-bottom: 31px
+    border: 1px solid rgba(116, 122, 153, 0.3)
+    border-radius: 4px
+    overflow: hidden
+    transition: border 0.3s
+    &::placeholder
+      color: $grey-text
+    &[type="password"]
+      font-family: 'Inter', sans-serif
+    &:focus
+      border: 1px solid $green
+  &__link
+    color: $green
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+  &__button
+    padding: 18px 18px 19px 19px
+    margin-bottom: 40px
+    &--secondary
+      background: transparent
+      color: $green
+      border: 1px solid #26BE96
+      text-transform: uppercase
+      font-weight: 600
+      font-size: 18px
+      line-height: 22px
+  &__closing
+    padding-top: 26px
+    width: 100%
+    text-align: center
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    color: $grey-text
+    border-top: 1px solid #1F2336

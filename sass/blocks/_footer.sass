@@ -1,0 +1,79 @@
+.footer
+  background: $footer-bg
+  padding: 85px 0
+  &__top
+    display: flex
+    align-items: center
+    padding: 0 0 40px 0
+    border-bottom: 1px solid#2B2F41
+  &__list
+    display: flex
+    list-style: none
+    padding: 0
+    margin: 0
+    flex-wrap: wrap
+    &-item
+      &:not(:last-child)
+        margin-right: 50px
+      &:last-child
+        margin-right: 75px
+      &-buttons
+        margin-right: 24px
+        &:nth-child(2)
+          margin-top: 4px
+    &-buttons
+      display: flex
+      list-style: none
+      padding: 0
+      margin: 0
+      align-items: center
+      margin-right: 60px
+  &__link
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    color: $grey-text
+    text-transform: uppercase
+  &__button
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    text-transform: uppercase
+    padding: 19px 27px
+    color: $green
+    border: 3px solid $green
+    border-radius: 4px
+
+.copyright
+  margin-top: 40px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &__text
+    font-weight: 400
+    font-size: 18px
+    line-height: 22px
+    color: $grey-text
+    span
+      font-weight: 600
+
+.to-top
+  position: fixed
+  bottom: 25px
+  right: 25px
+  width: 40px
+  height: 50px
+  overflow: hidden
+  background: linear-gradient(180deg, #397653 0%, #28543B 100%)
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25)
+  border-radius: 4px
+  padding: 14px 11px
+  opacity: 0
+  display: none
+  transition: background 0.3s
+  z-index: 10000
+  &--active
+    opacity: 1
+    display: block
+  img
+    object-fit: cover

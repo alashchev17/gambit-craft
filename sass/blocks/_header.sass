@@ -1,0 +1,72 @@
+.header
+  padding: 24px 0
+  &__wrapper
+    display: flex
+    align-items: center
+  &__logo
+    width: 54px
+    height: 51px
+    margin-right: 95px
+    display: inline-block
+    &-image
+      width: 54px
+      height: 51px
+  &__list, &__list-buttons
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    align-items: center
+    &-item
+      &:not(:last-child)
+        margin-right: 50px
+      &-buttons
+        &:nth-child(3)
+          margin-top: 4px
+        &:not(:last-child)
+          margin-right: 29px
+  &__link
+    color: $light
+    text-decoration: none
+    text-transform: uppercase
+    position: relative
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 5px
+      background-color: $green
+      left: 0
+      right: 0
+      bottom: -12px
+      transform: scaleX(0)
+      transition: transform 0.3s ease-in-out
+    &--active
+      &::after
+        transform: scaleX(100%)
+  &__nav
+    &-mobile
+      display: none
+    &-buttons
+      margin-left: 75px
+      
+    &-button
+      display: none
+  &__button
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    background: $green
+    color: $light
+    padding: 18px 21px 19px 26px
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    margin-left: 39px
+    svg
+      margin-right: 15px
+      path
+        fill: $light
